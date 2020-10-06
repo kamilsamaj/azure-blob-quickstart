@@ -24,6 +24,10 @@ public class App {
 
     // Create a local file in the ./data/ directory for uploading and downloading
     String localPath = "./data/";
+    File dir = new File(localPath);
+    System.out.println("Creating " + localPath);
+    dir.mkdirs();
+
     String fileName = "quickstart" + java.util.UUID.randomUUID() + ".txt";
     File localFile = new File(localPath + fileName);
 
